@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>GELATERIA "Una pallina al giorno toglie il dietologo di torno"</h1>
+    <h2>PREZZI:</h2>
+    <p>PREZZO PALLINA DI GELATO: 1.20€</p>
+    <p>PREZZO GELATO NELLA COPPETTA: 0.20€</p>
+    <p>PREZZO GELATO NEL CONO: 0.10€</p>
+    <p>PREZZO TOPPING SINGOLO: 0.50€</p>
+        <h2>Ordini:</h2>
+    <form id="ordine">
+        <h3>PALLINE DA ORDINARE:</h3>
+        <input type="number" id="quantità" name="quantità" min="1" max="3" step="1" value="1" required>
+        <h3>CONTENITORE DEL  GELATO:</h3>
+        <input type="radio" id="cono" name="contenitore" value="Cono">
+        <label for="cono">Cono</label>
+        <input type="radio" id="coppetta" name="contenitore" value="Coppetta">
+        <label for="coppetta">Coppetta</label>
+        <p>seleziona il gusto del tuo gelato:</p>
+        <label for="gusto">Gusto:</label>
+<select id="gusto" name="gusto">
+    <option value="Nocciola">Nocciola</option>
+    <option value="Pistacchio">Pistacchio</option>
+    <option value="Vaniglia">Vaniglia</option>
+    <option value="Fragola">Fragola</option>
+    <option value="Cioccolato">Cioccolato</option>
+</select>
+<h3>TOPPING:</h3>
+<input type="checkbox" id="panna" name="topping" value="panna">
+<label for="panna">Panna</label>
+<input type="checkbox" id="caramello" name="topping" value="cara">
+<label for="caramello">Caramello</label>
+<input type="checkbox" id="cioccolato" name="topping" value="ciocco">
+<label for="cioccolato">Cioccolato</label>
+    <br><br>
+    <h3>RITIRA LO SCONTRINO</h3>
+    <button type="button" id="scontrino">SCONTRINO</button>
+    <h3>RITIRA IL RESOCONTO GIORNALIERO</h3>
+        <button type="button" id="fine">FINE GIORNATA</button>
+    </form>
+    <h2>SCONTRINO</h2>
+<div id="risultato"></div>
+
+<h2>RESOCONTO GIORNALIERO</h2>
+<div id="riepilogo"></div>
+    <script type="module" src="dist/main.js"></script>
+</body>
+</html>
